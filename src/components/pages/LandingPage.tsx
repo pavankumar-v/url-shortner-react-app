@@ -1,6 +1,7 @@
 import Text from "@/components/ui/text";
 import { Input } from "@/components/ui/input"
 import { Button } from "../ui/button";
+import UrlShortenForm from "../shorten-form/UrlShortenForm";
 
 
 const LandingPage = () => {
@@ -15,10 +16,7 @@ const LandingPage = () => {
             </Text>
 
 
-            <Input className="mt-10 !text-accent-foreground max-w-3xl rounded-xl !text-[1.2rem] !py-[1.8rem] !px-[1rem] border-border border-2" placeholder="https://example.com/long-url" />
-            <Button variant="secondary" size="lg" className="text-xl p-6  w-full max-w-3xl mt-3 rounded-lg">
-                Generate Short Link
-            </Button>
+            <UrlShortenForm />
         </div>
     );
 }
