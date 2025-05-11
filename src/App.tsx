@@ -1,11 +1,12 @@
 import { Button } from '@/components/ui/button'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
 
   return (
-    <>
-      <Button>Click me</Button>
-    </>
+    <div className="h-screen w-screen flex flex-col">
+      <Navbar />
+    </div>
   )
 }
 
