@@ -29,12 +29,14 @@ const UrlShortenForm: React.FC = () => {
     const shortCode = await shortenUrl(values).then(res => res.short_code)
       .catch((err: AxiosError<{ errors: string[] }>) => {
         err.response?.data.errors.forEach((err) => {
-          form.setError('full_url', { message: err })
+          form.setError('full_url', { message: err, type: 'error' })
         })
       })
 
-    if (shortCode) setShortCode(shortCode)
-    form.reset();
+    if (shortCode) {
+      setShortCode(shortCode)
+      form.reset();
+    }
   }
 
   return (
